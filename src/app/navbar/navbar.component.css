@@ -1,6 +1,6 @@
 ul{
   list-style-type: none;
-  margin: 0;
+  margin: 1rem;
   padding: 0;
   overflow: hidden;
   background-color: #333333;
@@ -10,10 +10,11 @@ li{
     float: left;
 }
 
-li a{
+a, p{
     color: white;
     display: block;
     text-align: center;
+    text-decoration: none;
     padding: 16px;
 }
 
@@ -25,3 +26,4 @@ p{
     color: white;
     padding: 0 8px 0 8px;
 }
+
