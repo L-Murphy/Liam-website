@@ -18,7 +18,7 @@ a, p{
     padding: 16px;
 }
 
-li a:hover{
+a:hover{
     background-color: rgb(10, 122, 233);
 }
 

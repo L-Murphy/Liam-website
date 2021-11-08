@@ -24,7 +24,7 @@ h2 {
     text-align: center;
 }
 
-div#technical {
+.list-container {
     display: flex;
 }
 
@@ -35,4 +35,13 @@ div#technical ul{
 div#technical ul li{
     text-decoration: none;
     list-style: none;
+}
+
+div#about {
+    display: flex;
+    flex-direction: column;
+}
+
+#about h2{
+    display: top;
 }
