@@ -1,0 +1,45 @@
+figure{
+    text-align: center;
+}
+
+figure img{
+    text-align: center;
+    width: 300px;
+    height: auto;
+    padding: 1em;
+}
+
+.section {
+    margin: 2em;
+    font-size: 1em;
+    padding: 1em;
+    background-color: #CCCC;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.list-container {
+    display: flex;
+}
+
+div#technical ul{
+    flex: 33%;
+}
+
+div#technical ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
+div#about {
+    display: flex;
+    flex-direction: column;
+}
+
+#about h2{
+    display: top;
+}

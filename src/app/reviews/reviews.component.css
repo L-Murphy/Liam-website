@@ -1,0 +1,67 @@
+.reviews{
+    background-color: #CCCC;
+    margin: 1em;
+    border-radius: 1em;
+}
+
+.header{
+    font-size: 2em;
+    margin: 0.25em;
+    padding-top: .25em;
+}
+
+.seperator{
+    padding: 0;
+    margin: 0;
+    border-top: 3px solid #333333;
+}
+
+.review{
+    padding: 0.35em 0 0.35em 0.35em;
+}
+
+#quote{
+    font-size: 1.5em;
+}
+
+#name{
+    padding-left: 2em;
+}
+
+
+/* Radio Button Styling */
+.radioInput{
+    padding: 1.25em;
+    margin: 0 .5em .5em .5em;
+}
+
+/* The following works in chrome but not in Firefox */
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+
+    transition: all .4s ease-out;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #333333;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}

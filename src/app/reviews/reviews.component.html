@@ -1,0 +1,32 @@
+<div class="reviews" id="reviews">
+    <h2 class="header">Reviews from Unbiased Sources</h2>
+    <hr class="seperator">
+    <div class="review quote" id="quote">
+        "{{REVIEWS[radioSelect].quote}}"
+    </div>
+    <div class="review name" id="name">
+        - {{REVIEWS[radioSelect].name}}
+    </div>
+    <div class="review score" id="score">
+        <ng-container *ngFor="let i of [].constructor(REVIEWS[radioSelect].score)">
+            <img src='/assets/images/star-gold.svg' width='16'>
+        </ng-container>
+        <ng-container *ngFor="let i of [].constructor(5 - REVIEWS[radioSelect].score)">
+            <img src='/assets/images/star-white.svg' width='16'>
+        </ng-container>        
+        {{REVIEWS[radioSelect].score}} / 5
+    </div>
+
+
+    <div class="options" id="options">
+        <form #radioForm="ngForm" (change)="radioChange($event)">
+            <input class="radioInput" type="radio" name="radioSelect" value=0 checked [(ngModel)]="radioSelect">
+            <input class="radioInput" type="radio" name="radioSelect" value=1 [(ngModel)]="radioSelect">
+            <input class="radioInput" type="radio" name="radioSelect" value=2 [(ngModel)]="radioSelect">
+            <input class="radioInput" type="radio" name="radioSelect" value=3 [(ngModel)]="radioSelect">
+        </form>
+        
+    </div>
+</div>
+
+

@@ -1,0 +1,16 @@
+<div class="contact" id="contact" [hidden]="submitted">
+    <h2 class="header">Get in touch</h2>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+        <input type="text"  class = "form-control" id= "name" placeholder="Your Name" name="name" [(ngModel)] = "form.name"  required> 
+        <input type="text" class = "form-control"  id= "company" placeholder="Company Name" name="company" [(ngModel)] = "form.company" required> 
+        <input type="text" class = "form-control" id= "email" placeholder="Email" name="email" [(ngModel)] = "form.email" required> 
+        <input type="textarea" class = "form-control" id= "message" placeholder="Message" name = "message" [(ngModel)] = "form.message" required> 
+        <input type="submit" class = "btn" [disabled]="!contactForm.form.valid" value="Send" class="submit"/>
+    </form>    
+</div>
+
+
+<div class="contact form-submitted" id="form-submitted" [hidden]="!submitted">
+    <h2 class="header">Thank you for submitting!</h2>
+</div>
+
