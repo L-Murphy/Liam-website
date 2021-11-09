@@ -5,6 +5,7 @@ export class Review {
         public score: number
     ) {  }
 
+    //Useful for my debugging 
     printToConsole(): void {
         console.log("Quote: " + this.quote + "\nName: " + this.name + "\nScore" + this.score);
     }

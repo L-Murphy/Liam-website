@@ -6,16 +6,14 @@ figure img{
     text-align: center;
     width: 300px;
     height: auto;
-    padding: 2em;
-    background: #CCCCCC;
-    
+    padding: 1em;
 }
 
 .section {
     margin: 2em;
     font-size: 1em;
     padding: 1em;
-    background-color: #CCCCCC;
+    background-color: #CCCC;
     border-radius: 5px;
 }
 

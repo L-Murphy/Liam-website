@@ -1,11 +1,11 @@
 <div class="reviews" id="reviews">
-    <h2 class="header">Reviews from unbiased sources</h2>
+    <h2 class="header">Reviews from Unbiased Sources</h2>
     <hr class="seperator">
     <div class="review quote" id="quote">
         "{{REVIEWS[radioSelect].quote}}"
     </div>
     <div class="review name" id="name">
-        -{{REVIEWS[radioSelect].name}}
+        - {{REVIEWS[radioSelect].name}}
     </div>
     <div class="review score" id="score">
         <ng-container *ngFor="let i of [].constructor(REVIEWS[radioSelect].score)">
