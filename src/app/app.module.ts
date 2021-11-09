@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { BodyComponent } from './body/body.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { BodyComponent } from './body/body.component';
     NavbarComponent,
     FooterComponent,
     ContactComponent,
-    BodyComponent    
+    BodyComponent,
+    ReviewsComponent    
   ],
   imports: [
     BrowserModule,
