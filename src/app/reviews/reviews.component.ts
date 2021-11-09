@@ -8,6 +8,7 @@ import { Review } from '../review';
   templateUrl: './reviews.component.html',
   styleUrls: ['./reviews.component.css']
 })
+
 export class ReviewsComponent implements OnInit {
   REVIEW_ONE: Review;
   REVIEW_TWO: Review; 
