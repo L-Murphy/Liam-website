@@ -22,7 +22,6 @@
 
 
     <div class="options" id="options">
-        {{radioSelect}}
         <form #radioForm="ngForm" (change)="radioChange($event)">
             <input class="radioInput" type="radio" name="radioSelect" value=0 checked [(ngModel)]="radioSelect">
             <input class="radioInput" type="radio" name="radioSelect" value=1 [(ngModel)]="radioSelect">
