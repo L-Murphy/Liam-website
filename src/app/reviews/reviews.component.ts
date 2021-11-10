@@ -1,12 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Review } from '../review';
+import { transition, animate, trigger, state, style } from '@angular/animations';
+import { bindCallback } from 'rxjs';
 
 
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
-  styleUrls: ['./reviews.component.css']
+  styleUrls: ['./reviews.component.css'],
+  animations: [
+    trigger('quoteChange', [
+      state('show', 
+        style({
+           opacity: 1
+        })), 
+      state('hide', 
+        style({
+          opacity: 0.7
+        })), 
+      transition('show => hide', [
+        animate('0.5s')
+      ]), 
+      transition('hide => show',[
+        animate('0.5s')
+      ])
+    ])]
 })
 
 export class ReviewsComponent implements OnInit {
@@ -16,6 +35,7 @@ export class ReviewsComponent implements OnInit {
   REVIEW_FOUR: Review;
   REVIEWS: Review[];
   radioSelect = 0;
+  show: boolean = true;
 
   constructor() { 
     this.REVIEW_ONE = new Review("Mom", "Wow I love this website honey! It's incredible!", 5);
@@ -31,8 +51,7 @@ export class ReviewsComponent implements OnInit {
   }
 
   radioChange(value: any): void {
-    console.log("radio button pressed: " + value.target.value);
-    
+    this.show = !this.show;   
   }
 
 }
