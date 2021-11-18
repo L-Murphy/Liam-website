@@ -36,28 +36,21 @@ export class ContactComponent implements OnInit {
     this.clearForm();
   }
 
+  //I have a local node server to handle this request. Will not work live as is
   sendEmail(form: ContactForm): void {
     var url = "http://localhost:8000/email";
-    // var body = {
-    //   name: form.name,
-    //   company: form.company,
-    //   email: form.email, 
-    //   message: form.message
-    // };
-    // var resp = this.http.post<any>(url, body);
-    // console.log(resp);
-    // console.log("sent email");
-
-        const body = {
-            name: form.name,
-            company: form.company,
-            email: form.email, 
-            message: form.message
-          };
-        this.http.post<any>(url, body).subscribe(data => {
-            this.postId = data.id;
-            console.log(data.id);
-        });
+    const body = {
+        name: form.name,
+        company: form.company,
+        email: form.email, 
+        message: form.message
+      };
+    this.http.post<any>(url, body).subscribe(
+      data => {
+        this.postId = data.id;
+        console.log(data.id);
+      }
+    );
   }
 
   clearForm(): void {
