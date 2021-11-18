@@ -1,6 +1,20 @@
-/* This file is very messy right now. TODO: format it */
 
 
+/* General */
+.section {
+    margin: 1em;
+    font-size: 1em;
+    padding: 1em;
+    background-color: #CCCC;
+    border-radius: 15px;
+}
+
+.title {
+    font-size: 2em;
+    padding-left: .5em;
+}
+
+/* Profile Picture */
 .picture {
     margin: 0;
     float: left;
@@ -14,14 +28,16 @@
     height: 100%;
 }
 
-.about{
-    display: inline-block;
-}
-
 .fig{
     width: 20%;
     height: 50%;
     float: left;
+}
+
+/* About section text */
+
+.about{
+    display: inline-block;
 }
 
 .about_paragraph {
@@ -31,13 +47,7 @@
     font-size: 1.25em;
 }
 
-.section {
-    margin: 1em;
-    font-size: 1em;
-    padding: 1em;
-    background-color: #CCCC;
-    border-radius: 15px;
-}
+/* Technical Knowledge Section */
 
 .list-container {
     display: flex;
@@ -58,16 +68,16 @@ div#technical ul li{
     text-align: center;
 } 
 
-.title {
-    font-size: 2em;
-    padding-left: .5em;
+/* Experiences Section */
+.subtitle {
+    padding-left: 1em;
 }
-
 .paragraph {
     padding-left: 1em;
     font-size: 1.25em;
 }
 
-.subtitle {
-    padding-left: 1em;
+/* Personal Projects Section */
+.projectList li {
+    font-size: 1.25em;
 }
