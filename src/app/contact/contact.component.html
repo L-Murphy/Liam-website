@@ -1,6 +1,6 @@
 <div class="contact" id="contact" [hidden]="submitted">
     <h2 class="header">Get in touch</h2>
-    <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit()" data-netlify="true" name="contact">
         <input type="text"  class = "form-control" id= "name" placeholder="Your Name" name="name" [(ngModel)] = "form.name"  required> 
         <input type="text" class = "form-control"  id= "company" placeholder="Company Name" name="company" [(ngModel)] = "form.company" required> 
         <input type="text" class = "form-control" id= "email" placeholder="Email" name="email" [(ngModel)] = "form.email" required> 
