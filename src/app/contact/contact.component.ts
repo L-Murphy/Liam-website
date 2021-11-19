@@ -3,6 +3,8 @@ import { FormControl, FormsModule, NgForm } from '@angular/forms';
 import { ContactForm } from '../contact-form';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { NetlifyFormsService } from '../netlify-form/netlify-forms.service';
 
 @Component({
   selector: 'app-contact',
@@ -15,10 +17,12 @@ export class ContactComponent implements OnInit {
   form: ContactForm;
   submitted: boolean;
   postId: any;
+  error: boolean;
 
 
-  constructor(private http: HttpClient) {    
+  constructor(private http: HttpClient, private netlifyForms: NetlifyFormsService) {    
     this.submitted = false;
+    this.error = false;
     this.form = new ContactForm("", "", "", "");
    }
 
@@ -26,18 +30,22 @@ export class ContactComponent implements OnInit {
 
   }
 
-  onSubmit(): void {
-    console.log("Submitted with name: " + this.form.name 
-      + "\nSubmitted with company: " + this.form.company 
-      + "\nSubmitted with email: " + this.form.email 
-      + "\nSubmitted with message: " + this.form.message);        
-    this.sendEmail(this.form);
-    this.submitted = true;
-    this.clearForm();
+  onSubmit(): void {   
+    this.netlifyForms.submitFeedback(this.form).subscribe(
+      () => {
+        this.submitted = true;
+        this.clearForm();
+      },
+      err =>{
+        this.error = true;
+        console.log(err.toString());
+      }
+    )
+    
   }
 
-  //I have a local node server to handle this request. Will not work live as is
-  sendEmail(form: ContactForm): void {
+  //Used for local testing of emails. 
+  private sendEmail(form: ContactForm): void {
     var url = "http://localhost:8000/email";
     const body = {
         name: form.name,

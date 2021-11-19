@@ -11,6 +11,15 @@
       "schematics": {
         "@schematics/angular:application": {
           "strict": true
+        },
+        "architect": {
+          "options":{
+            "assets": {
+              "glob": "_redirects",
+              "input": "src",
+              "output": "/"
+            }
+          }
         }
       },
       "root": "",

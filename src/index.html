@@ -8,6 +8,13 @@
   <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
 </head>
 <body>
+  <form name="contact" data-netlify="true" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text"  class = "form-control" id= "name" placeholder="Your Name" name="name" [(ngModel)] = "form.name"  required> 
+    <input type="text" class = "form-control"  id= "company" placeholder="Company Name" name="company" [(ngModel)] = "form.company" required> 
+    <input type="text" class = "form-control" id= "email" placeholder="Email" name="email" [(ngModel)] = "form.email" required> 
+    <input type="textarea" class = "form-control" id= "message" placeholder="Message" name = "message" [(ngModel)] = "form.message" required> 
+    <button type="submit" class = "btn" [disabled]="!contactForm.form.valid" value="Send" class="submit">Submit</button>
+  </form> 
   <app-root></app-root>
 </body>
 </html>
