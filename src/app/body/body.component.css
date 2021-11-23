@@ -54,7 +54,7 @@
 }
 
 .list_title {
-    font-size: 1.5em;
+    font-size: 1.9em;
     padding-bottom: .5em;
 }
 
@@ -62,16 +62,26 @@ div#technical ul{
     flex: 33%;
 }
 
+@media only screen and (max-width: 700px) {
+    .list-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+  }
+
 div#technical ul li{
     text-decoration: none;
     list-style: none;
     text-align: center;
+    font-size: 1.25em;
 } 
 
 /* Experiences Section */
-.subtitle {
-    padding-left: 1em;
+.experience li{
+    font-size: 1.25em;
 }
+
 .paragraph {
     padding-left: 1em;
     font-size: 1.25em;
