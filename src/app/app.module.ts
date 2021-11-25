@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { BodyComponent } from './body/body.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { ToTopBtnComponent } from './to-top-btn/to-top-btn.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     FooterComponent,
     ContactComponent,
     BodyComponent,
-    ReviewsComponent    
+    ReviewsComponent,
+    ToTopBtnComponent    
   ],
   imports: [
     BrowserModule,
